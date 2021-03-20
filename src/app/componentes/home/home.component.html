@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>CALCULADORA</h1>
+    <div>
+        Edad1:
+        <input type="number" placeholder="Ingrese su edad" [(ngModel)] = "edad1">
+
+        Edad2:
+        <input type="number" placeholder="Ingrese su edad" [(ngModel)] = "edad2">
+    </div>    
+    <br>
+    <div>
+        <button type="button" class="btn btn-primary" (click)="calcularPromedio()">Calcular Promedio </button>
+        <button type="button" class="btn btn-danger"(click)="limpiar()">Limpiar</button>
+    </div>
+        
+    <div *ngIf="mostrar">
+        <h3>            
+            El promedio entre las edades es {{promedio}}.
+        </h3>
+    </div>
+    
+    
+</body>
+</html>
